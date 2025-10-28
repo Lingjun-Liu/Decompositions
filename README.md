@@ -189,10 +189,14 @@ RIF 把任意分布统计量（如分位数、Gini 系数）线性化，使其�
 ---
 
 ### 3. 我的博士论文中是如何使用RIF-OB分解的
+
+
 我关注到了老年人的self perception of aging存在城乡和性别差异，于是使用RIF-OB分解分析这种差异的影响因素。RIF-OB分解的好处是除了均值差异之外还可以研究分布差异，因此我的研究主要关注了四种差异：均值差异、方差差异、P90-P10分位数差异、基尼系数差异。
 是根据[Jann2024](The%20OB%20in%20Stata%202024%20byBen%20Jann.pdf)、[Andrew2024](./RIF+RIF-OB%202024%20by%20Andrew%20.pdf)的教程，在STATA18中完成的分析，[代码](./RIF-OB%20stata%20do-file.do)。
 另外我还对结果进行了可视化，可以得到一个更直观的对比图，[绘制代码](./visualization%20code%20of%20RIF-OB%20STATA%20do-file.do)在此分享。
 ![图片](./Figure3.png)
+
+
 ---
 
 ## 🧮 三、Shapley 与 SHAP：分解的博弈论根源与机器学习拓展
