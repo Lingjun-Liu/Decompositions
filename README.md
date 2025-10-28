@@ -22,7 +22,7 @@
 实际上分解的思想最早是从人口学提出的，人口学的分解方法最早用于解释**人口指标差异的来源**。
 最初了解到分解是多年前读到关于生育率分解的文献，从人口学的角度来看，通过对生育率的分解可以发现，主要是生育数量的减少和生育时间的推迟，导致时期总和生育率的下降。
 
-### 2. 经典方法
+### 1. 经典方法
 
 #### （1）**Kitagawa 分解（1955）**
 Kitagawa 是最早的线性分解方法，用于把两个总体率（如TFR、死亡率）差异拆分为“构成差异”和“率差异”两部分。
@@ -77,8 +77,7 @@ Kitagawa（1955）提出的方法把这个“总差异”拆成两部分：
 这其实就是把Kitagawa的“两步平均”推广成“多步平均”，
 换句话说，是一个多维版本的“Shapley 分解”。
 
- > - Andreev, E. M., Shkolnikov, V. M., & Begun, A. Z. (2002). Algorithm for decomposition of differences between aggregate demographic measures and its application to life expectancies, healthy life expectancies, parity-progression ratios and total fertility rates. Demographic research, 7, 499-522.[Link](https://www.jstor.org/stable/26348070?seq=1)
- > - 
+> - Andreev, E. M., Shkolnikov, V. M., & Begun, A. Z. (2002). Algorithm for decomposition of differences between aggregate demographic measures and its application to life expectancies, healthy life expectancies, parity-progression ratios and total fertility rates. Demographic research, 7, 499-522.[Link](https://www.jstor.org/stable/26348070?seq=1)
 
 #### （3）**连续变化法（Horiuchi et al., 2008）**
 将差异看作参数从群体B连续变为A的过程。
@@ -147,9 +146,9 @@ Kitagawa（1955）提出的方法把这个“总差异”拆成两部分：
 
 Oaxaca 和 Blinder 几乎同时提出了这一方法，用于将两群体（如男性与女性）的平均工资差拆解为两部分：
 
-[
+$$
 \Delta \bar{W} = (\bar{X}_A - \bar{X}_B)\hat{\beta}_B + \bar{X}_B(\hat{\beta}_A - \hat{\beta}_B)
-]
+$$
 
 * **解释部分 (Explained)**：特征差异（如教育、经验、行业）
 * **不可解释部分 (Unexplained)**：报酬差异（通常解释为歧视）
@@ -168,11 +167,11 @@ Oaxaca 和 Blinder 几乎同时提出了这一方法，用于将两群体（如�
 RIF 把任意分布统计量（如分位数、Gini 系数）线性化，使其可被回归与分解。
 
 > **思想：**
-> 对任意统计量 (v(F_Y))，计算其 RIF：
-> [
-> RIF(y; v) = v + IF(y; v)
-> ]
-> 其中 (IF) 是影响函数。对 RIF 进行线性回归，就能像处理均值一样做分解。
+> 对任意统计量 $v(F_Y)$，计算其 RIF：
+> $$
+> \operatorname{RIF}(y; v) = v + IF(y; v)
+> $$
+> 其中 $IF$ 是影响函数。对 RIF 进行线性回归，就能像处理均值一样做分解。
 
 因此，RIF–OB 可以解释：
 
@@ -225,12 +224,12 @@ Shapley 在博弈论中提出了一种**公平分摊法则**：
 * 计算每个特征的平均边际贡献。
 
 结果：
-[
+$$
 f(x) = \phi_0 + \sum_j \phi_j
-]
+$$
 
-* (\phi_0)：基准输出（平均预测）
-* (\phi_j)：特征 (j) 对预测的 Shapley 贡献
+* $\phi_0$：基准输出（平均预测）
+* $\phi_j$：特征 $j$ 对预测的 Shapley 贡献
 
 关于想要学习和使用，我在kaggle上找到一个不错的学习和练习的教程：[Advanced Uses of SHAP Values](https://www.kaggle.com/code/dansbecker/advanced-uses-of-shap-values)
 
